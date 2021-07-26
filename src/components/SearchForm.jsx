@@ -33,13 +33,12 @@ class SearchForm extends React.Component {
         });
     }
 
-    render() {        
+    render() {
         return (
             <>
                 <form onSubmit={this._handleSubmit}>
-                    <input type="text" onChange={this._handleChange} />
-                    <label>{this.state.username}</label>
-                    {/* <button type="submit">Submit</button> */}
+                    <input type="text" id="username" onChange={this._handleChange} />
+                    <label htmlFor="username">{this.state.username}</label>
                 </form>
                 <UserCardList users={this.state.users} />
             </>

@@ -3,11 +3,7 @@ import { useParams } from "react-router-dom";
 const UserProfile = (props) => {
     const { username } = useParams();
 
-    const targetUser = props.users.find((user) => {
-        if (user.login === username) {
-            return user;
-        }
-    });
+    const targetUser = props.users.find(user => user.login === username);
 
     console.log("TARGET USER: ", targetUser);
 
